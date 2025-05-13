@@ -1,0 +1,8 @@
+{
+  "name": "VM vs Docker Benchmark",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "postCreateCommand": "apt update && apt install -y htop sysbench fio iperf3 stress-ng"
+}
