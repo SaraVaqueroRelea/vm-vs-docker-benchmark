@@ -23,3 +23,8 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 ```bash
 docker build -t benchmark docker/
 docker run --rm benchmark
+```
+
+## Lo que haré
+#### Se va a hacer una comparación de rendimiento entre una Máquina Virtual (Ubuntu 22.04) y un sistema Docker (Ubuntu 22.04). Para ello, se ejecutará el videojuego ***DOOM (1993)***.
+![DOOM_Classic_PS4_Review-1024x576](https://github.com/user-attachments/assets/80f004f7-a69c-41b9-a06d-0c85852a06f4)
