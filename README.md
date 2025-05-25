@@ -6,21 +6,10 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 
 - CPU
 - Memoria
-- Disco
-- Red
 
 ## 📂 Estructura
 
 - `doom-docker/`: entorno Docker
-
-## ▶️ Cómo ejecutar las pruebas
-
-### En Docker:
-
-```bash
-docker build -t benchmark docker/
-docker run --rm benchmark
-```
 
 # Método de comparación de rendimiento de Docker y Máquina Virtual
 #### Se va a hacer una comparación de rendimiento entre una Máquina Virtual (Ubuntu 22.04) y un sistema Docker (Ubuntu 22.04). Para ello, se ejecutará el videojuego ***DOOM (1993)***.
@@ -55,4 +44,34 @@ docker run --rm benchmark
 
 #### Ejecutamos el juego:
 `docker run -e DISPLAY=host.docker.internal:0 chocolate-doom`
+
+## Comparación de rendimiento
+### En Docker 
+#### Ejecutaremos el comando `docker stats`, que nos mostrará:
+- Uso de CPU %
+
+- Uso de memoria
+
+- Entrada/salida de red
+
+- Entrada/salida de disco
+
+- Métricas en vivo por contenedor
+
+### En VM
+#### Ejecutaremos el comando `top` en la terminal de Linux. Esto nos mostrará:
+- Uso de CPU %
+
+- Uso de memoria
+
+- Entre otras cosas.
+
+
+# RESULTADOS
+
+## En VM
+[DOOM on VM](./media/DOOM_VM.mp4)
+
+## En Docker
+
 
