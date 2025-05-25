@@ -10,6 +10,7 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 ## 📂 Estructura
 
 - `doom-docker/`: entorno Docker
+- `media/`: archivos multimedia usados
 
 # Método de comparación de rendimiento de Docker y Máquina Virtual
 #### Se va a hacer una comparación de rendimiento entre una Máquina Virtual (Ubuntu 22.04) y un sistema Docker (Ubuntu 22.04). Para ello, se ejecutará el videojuego ***DOOM (1993)***.
@@ -27,15 +28,16 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 `chocolate-doom -iwad ~/doom1.wad`
 
 ### Instalación y ejecución en Docker (Ubuntu 22.04)
-#### Comenzaremos descargando lo siguiente en lá máquina host en el caso de que estemos utilizando Windows.
+#### Comenzaremos descargando lo siguiente en la máquina host en el caso de que estemos utilizando Windows.
 
 - **Docker**
-- **WSL**,necesario para el funcionamiento del entorno de Linux en el sistema operativo ***Windows 11***.
-- **X410**, herramienta de Windows que permite ejecutar interfaces gráficas de Linux en Windows.
+- **WSL**, necesario para el funcionamiento del entorno de Linux en el sistema operativo ***Windows 11***.
+- **X410**, herramienta que permite ejecutar interfaces gráficas de Linux en Windows.
+- **Chocolate Doom**, el motor del juego.
 
 > Importante: Docker y X410 tienen que estar ejécutandose para el funcionamiento del juego. Si alguna de estas no está funcionando aunque sea en segundo plano, el juego no iniciará.
 
-#### Creamos la carpeta `doom-docker`, el Archivo `Dockerfile`, el cual he adjuntado, así como el archivo `DOOM.WAD`, que podríamos decir que es el juego en **sí mismo**.
+#### Creamos la carpeta `doom-docker`, el archivo `Dockerfile`, el cual he adjuntado, así como el archivo `DOOM.WAD`, que podríamos decir que es el juego en **sí mismo**. 
 
 #### Creamos la imagen de Docker:
 `cd C:\Users\NombreUsuario\doom-docker`
@@ -75,3 +77,12 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 ## En Docker
 ![DOOM on Docker](./media/DOOM_Docker.gif)
 
+## Rendimiento de la CPU
+![CPU Comparison](./media/CPU_Comparison.jpg)
+## Rendimiento de la Memoria
+![Memory Comparison](./media/MEM_Comparison.jpg)
+
+# ¿Por qué?
+### Podemos observar como, pese a que nuestra máquina virtual consume mucha más CPU y memoria, el juego se ejecuta de forma mucho más fluida a cómo lo hace en un entorno Docker. 
+
+### La razón por la que esto sucede es simple: Docker no está preparado para aplicaciones gráficas, como es un videojuego. Docker ejecuta mucho mejor aplicaciones sin interfaces. En caso de un videojuego, los gráficos se renderizan por software, lo cual es muy lento. Además, el uso de una herramienta como ***X410*** causa mayor latencia.
