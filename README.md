@@ -70,8 +70,8 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 # RESULTADOS
 
 ## En VM
-[DOOM on VM](./media/DOOM_VM.mp4)
+[DOOM on VM](./media/DOOM_VM.gif)
 
 ## En Docker
-[DOOM on Docker](./media/DOOM_Docker.mp4)
+[DOOM on Docker](./media/DOOM_Docker.gif)
 
