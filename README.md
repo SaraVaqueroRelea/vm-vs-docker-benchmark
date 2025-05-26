@@ -21,11 +21,11 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 ### Instalación y ejecución en Máquina Virtual (VM)
 #### Introduciremos los siguientes comandos en la terminal de nuestra VM (en este caso, Ubuntu 22.04):
 
-`sudo apt install chocolate-doom`
+`sudo apt install chocolate-doom`: instalamos **Chocolate Doom**.
 
-`wget https://distro.ibiblio.org/pub/linux/distributions/slitaz/sources/packages/d/doom1.wad`
+`wget https://distro.ibiblio.org/pub/linux/distributions/slitaz/sources/packages/d/doom1.wad`: Descargamos el archivo `.wad`
 
-`chocolate-doom -iwad ~/doom1.wad`
+`chocolate-doom -iwad ~/doom1.wad`: Ejecutamos el juego.
 
 ### Instalación y ejecución en Docker (Ubuntu 22.04)
 #### Comenzaremos descargando lo siguiente en la máquina host en el caso de que estemos utilizando Windows.
