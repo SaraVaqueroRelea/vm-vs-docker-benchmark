@@ -6,6 +6,7 @@ Este proyecto compara el rendimiento de una máquina virtual (VM) y un contenedo
 
 - CPU
 - Memoria
+- Espacio en disco requerido
 
 ## 📂 Estructura
 
